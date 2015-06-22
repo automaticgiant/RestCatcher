@@ -1,11 +1,7 @@
-import com.google.gson.Gson;
 import spark.Request;
 import spark.Response;
 import spark.Spark;
 import spark.SparkBase;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.stream.Collectors;
 
 /**
  * Created by hunt8886 on 2015-06-18.
@@ -13,9 +9,12 @@ import java.util.stream.Collectors;
 public class RestCatcher {
     public static void main(String[] args){
         SparkBase.port(12345);
-        Spark.get("*", RestCatcher::reflector);
-        Spark.put("*", RestCatcher::reflector);
-        Spark.post("*", RestCatcher::reflector);
+        final String all = "*";
+        Spark.get(all, RestCatcher::reflector);
+        Spark.post(all, RestCatcher::reflector);
+        Spark.put(all, RestCatcher::reflector);
+        Spark.delete(all, RestCatcher::reflector);
+        Spark.options(all, RestCatcher::reflector);
     }
 
     private static String reflector(Request request, Response response) {
