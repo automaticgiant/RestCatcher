@@ -6,7 +6,7 @@
 
     <groupId>rs</groupId>
     <artifactId>RestCatcher</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <build>
         <plugins>
             <plugin>
@@ -36,11 +36,6 @@
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
             <version>2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.3.1</version>
         </dependency>
     </dependencies>
 
