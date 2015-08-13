@@ -1,3 +1,5 @@
+package com.automaticgiant.restcatcher;
+
 import spark.Request;
 import spark.Response;
 import spark.Spark;
